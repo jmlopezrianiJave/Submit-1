@@ -12,14 +12,12 @@ int main(int argc, char* argv[]) {
 
     srand(time(NULL));
 
-    int dentro = 0; // puntos dentro del círculo
+    int dentro = 0;
 
     for (int i = 0; i < N; i++) {
-        // Generar coordenadas x, y entre -1 y 1 [-1, 1]
         double x = -1 + 2 * (double)rand() / RAND_MAX;
         double y = -1 + 2 * (double)rand() / RAND_MAX;
 
-        // Verificar si está dentro del círculo de radio 1
         if (x * x + y * y <= 1.0) {
             dentro++;
         }
